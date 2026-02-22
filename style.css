@@ -1,8 +1,8 @@
 /* Genel Ayarlar ve Renk Paleti */
 :root {
-    --primary-color: #1a252f; /* Daha tok ve profesyonel bir lacivert */
+    --primary-color: #1a252f; 
     --secondary-color: #18bc9c;
-    --bg-color: #f8f9fa; /* Göz yormayan çok açık gri/beyaz */
+    --bg-color: #f8f9fa; 
     --text-color: #333;
     --card-bg: #ffffff;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* İçerik alanını genişlettik */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -30,12 +30,12 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 80px 0; /* Üst kısmı biraz daha ferahlattık */
+    padding: 80px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3rem; /* İsim daha büyük */
+    font-size: 3rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -94,16 +94,16 @@ main h2 {
 .project-grid {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Projeler arasına devasa boşluklar koyduk ki birbirine girmesinler */
+    gap: 80px;
 }
 
 /* Yeni Nesil Kart Tasarımı (Flexbox Zigzag) */
 .project-card {
-    display: flex; /* Resim ve yazıyı yan yana alır */
+    display: flex;
     background-color: var(--card-bg);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Daha yumuşak ve geniş bir derinlik */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -112,14 +112,13 @@ main h2 {
     box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
-/* Çift Numaralı Kartlarda Tasarımı Tersine Çevir (Resim Sağda, Yazı Solda) */
 .project-card:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .image-placeholder {
-    flex: 1; /* %50 Genişlik */
-    min-height: 450px; /* Resim yüksekliği çok daha büyük */
+    flex: 1;
+    /* min-height kaldırıldı */
     background-color: #e0e0e0;
     display: flex;
     align-items: center;
@@ -129,12 +128,12 @@ main h2 {
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Resmi ezmeden alana tam doldurur */
+    object-fit: contain; /* Resmi sığdırır, tamamı görünür */
 }
 
 .project-content {
-    flex: 1; /* %50 Genişlik */
-    padding: 60px; /* Yazıların etrafında bolca nefes alma payı */
+    flex: 1;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,12 +142,12 @@ main h2 {
 .project-content h3 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-size: 2rem; /* Başlıklar çok daha büyük */
+    font-size: 2rem;
 }
 
 .function {
     margin-bottom: 25px;
-    font-size: 1.15rem; /* Açıklamalar daha okunaklı */
+    font-size: 1.15rem;
     color: #444;
 }
 
@@ -182,15 +181,15 @@ footer {
     margin-top: 60px;
 }
 
-/* Mobil Cihazlar İçin Ayarlar (Ekran küçülünce alt alta geçmeleri için) */
+/* Mobil Cihazlar İçin Ayarlar */
 @media (max-width: 992px) {
     .project-card, 
     .project-card:nth-child(even) {
-        flex-direction: column; /* Telefondan girince hepsi alt alta olur */
+        flex-direction: column;
     }
     
     .image-placeholder {
-        min-height: 300px;
+        /* min-height burada da kaldırıldı */
     }
     
     .project-content {
