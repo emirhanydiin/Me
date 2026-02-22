@@ -1,8 +1,8 @@
-/* Genel Ayarlar */
+/* Genel Ayarlar ve Renk Paleti */
 :root {
-    --primary-color: #2c3e50;
+    --primary-color: #1a252f; /* Daha tok ve profesyonel bir lacivert */
     --secondary-color: #18bc9c;
-    --bg-color: #f4f7f6;
+    --bg-color: #f8f9fa; /* Göz yormayan çok açık gri/beyaz */
     --text-color: #333;
     --card-bg: #ffffff;
 }
@@ -17,11 +17,11 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px; /* İçerik alanını genişlettik */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -30,42 +30,45 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 60px 0;
+    padding: 80px 0; /* Üst kısmı biraz daha ferahlattık */
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* İsim daha büyük */
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #bdc3c7;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .skills span {
     background-color: var(--secondary-color);
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin: 0 5px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin: 0 8px;
     display: inline-block;
+    font-weight: 600;
 }
 
 .contact-links {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .contact-links a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    border: 1px solid white;
-    padding: 8px 15px;
+    border: 2px solid white;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -76,66 +79,77 @@ header p {
 
 /* Projeler Bölümü */
 main {
-    padding: 50px 20px;
+    padding: 80px 20px;
 }
 
 main h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
     color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Projeler arasına devasa boşluklar koyduk ki birbirine girmesinler */
 }
 
-/* Kart Tasarımı */
+/* Yeni Nesil Kart Tasarımı (Flexbox Zigzag) */
 .project-card {
+    display: flex; /* Resim ve yazıyı yan yana alır */
     background-color: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Daha yumuşak ve geniş bir derinlik */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* Çift Numaralı Kartlarda Tasarımı Tersine Çevir (Resim Sağda, Yazı Solda) */
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .image-placeholder {
-    width: 100%;
-    height: 250px;
+    flex: 1; /* %50 Genişlik */
+    min-height: 450px; /* Resim yüksekliği çok daha büyük */
     background-color: #e0e0e0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7f8c8d;
-    font-style: italic;
-    overflow: hidden;
 }
 
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Resmi ezmeden alana tam doldurur */
 }
 
 .project-content {
-    padding: 20px;
+    flex: 1; /* %50 Genişlik */
+    padding: 60px; /* Yazıların etrafında bolca nefes alma payı */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project-content h3 {
     color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Başlıklar çok daha büyük */
 }
 
 .function {
-    margin-bottom: 15px;
-    font-size: 0.95rem;
+    margin-bottom: 25px;
+    font-size: 1.15rem; /* Açıklamalar daha okunaklı */
+    color: #444;
 }
 
 .features {
@@ -144,26 +158,42 @@ main h2 {
 
 .features li {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
 }
 
 .features li::before {
     content: "•";
     color: var(--secondary-color);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: absolute;
     left: 0;
-    top: -2px;
+    top: -6px;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     background-color: var(--primary-color);
     color: white;
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+/* Mobil Cihazlar İçin Ayarlar (Ekran küçülünce alt alta geçmeleri için) */
+@media (max-width: 992px) {
+    .project-card, 
+    .project-card:nth-child(even) {
+        flex-direction: column; /* Telefondan girince hepsi alt alta olur */
+    }
+    
+    .image-placeholder {
+        min-height: 300px;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
 }
