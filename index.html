@@ -125,6 +125,18 @@
                     </div>
                 </div>
             </article>
+            
+            <article class="project-card">
+                <div class="project-content">
+                    <h3>Snake Game on a Hand-Controlled Console</h3>
+                    <p class="function"><strong>Function:</strong> A custom hand-held console playing the classic Snake game, built on the TI TM4C123GH6PM microcontroller. The game is controlled entirely by physical hand gestures (tilting) using an accelerometer.</p>
+                    <ul class="features">
+                        <li><strong>Core Logic:</strong> Developed the main game mechanics in Bare-metal C, while the ADC data acquisition was written strictly in ARM Assembly.</li>
+                        <li><strong>Interrupt-Driven Sensor Integration:</strong> Implemented a Finite State Machine (FSM) inside the I2C interrupt handler to read accelerometer (ADXL345) data without halting the CPU.</li>
+                        <li><strong>Audio Feedback:</strong> Generated non-blocking game sounds (turn, error, game over) using a passive buzzer and hardware timers (GPTM).</li>
+                    </ul>
+                </div>
+            </article>
 
         </div>
     </main>
