@@ -11,11 +11,20 @@
     <header>
         <div class="container">
             <h1>Emirhan AYDIN</h1>
-            <p>Hardware and Embedded Systems Developer</p>
+            <p>
+                <span class="lang-en">Hardware and Embedded Systems Developer</span>
+                <span class="lang-tr">Donanım ve Gömülü Sistemler Geliştiricisi</span>
+            </p>
             <div class="skills">
-                <span>Verified Designs</span>
-                <span>PCB Design</span>
-                <span>Embedded Systems</span>
+                <span class="lang-en">Verified Designs</span>
+                <span class="lang-tr">Doğrulanmış Tasarımlar</span>
+                
+                <span class="lang-en">PCB Designs</span>
+                <span class="lang-tr">PCB Tasarımları</span>
+                
+                <span class="lang-en">Embedded Systems</span>
+                <span class="lang-tr">Gömülü Sistemler</span>
+                
                 <span>C / Assembly / Verilog</span>
             </div>
             <div class="contact-links">
@@ -23,6 +32,7 @@
                 <a href="https://www.linkedin.com/in/emirhanydiin/" target="_blank">LinkedIn</a>
                 <a href="mailto:aydin.emirhan@metu.edu.tr">Contact</a>
                 <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+                <button id="lang-toggle" class="theme-btn">🇹🇷 TR / 🇬🇧 EN</button>
             </div>
             
             <nav class="top-nav">
@@ -33,40 +43,114 @@
     </header>
 
     <main class="container" id="hardware-projects">
-        <h2>PCB Projects</h2>
-        <div class="project-grid">
+    <h2>
+        <span class="lang-en">PCB Projects</span>
+        <span class="lang-tr">PCB Projeleri</span>
+    </h2>
+    <div class="project-grid">
 
-            <article class="project-card">
-                <div class="image-placeholder">
-                    <img src="images/PL_EvaluationBoard.jpeg" alt="POWERLAB TMS320F280049C Evaluation Board">
-                </div> 
-                <div class="project-content">
-                    <h3>PL Driver Evaluation Board</h3>
-                    <p class="function"><strong>Function:</strong> A high-power, versatile driver evaluation board based on the TI TMS320F280049C. This board is designed for precise motor control applications with a high-efficiency power stage and advanced control algorithms by extending the full power of TMS320F280049C.</p>
-                    <ul class="features">
-                        <li><strong>Microcontroller:</strong> TI TMS320F280049C based architecture</li>
-                        <li><strong>Power Ratings:</strong> 9V - 50V Input Voltage, Nominal 300W Output Power</li>
-                        <li><strong>Hardware Features:</strong> USB-C PD (@ 100W), eFuse protection, and Internal Magnetic Encoder</li>
-                        <li><strong>Communication & Interface:</strong> CANBus, UART, SPI, I2C, and JTAG programmable</li>
-                        <li><strong>Programming:</strong> Isolated USB Programmer for safe development</li>
-                    </ul>
-                </div>
-            </article>
+        <article class="project-card">
+            <div class="image-placeholder">
+                <img src="images/PL_EvaluationBoard.jpeg" alt="POWERLAB TMS320F280049C Evaluation Board">
+            </div> 
+            <div class="project-content">
+                <h3>
+                    <span class="lang-en">PL Driver Evaluation Board</span>
+                    <span class="lang-tr">PL Sürücü Değerlendirme Kartı</span>
+                </h3>
+                <p class="function">
+                    <strong class="lang-en">Function:</strong>
+                    <strong class="lang-tr">İşlev:</strong> 
+                    <span class="lang-en">A high-power, versatile driver evaluation board based on the TI TMS320F280049C. This board is designed for precise motor control applications with a high-efficiency power stage and advanced control algorithms by extending the full power of TMS320F280049C.</span>
+                    <span class="lang-tr">TI TMS320F280049C tabanlı, yüksek güçlü ve çok yönlü bir sürücü değerlendirme kartı. Bu kart, TMS320F280049C'nin tüm işlem gücünü kullanarak; yüksek verimli güç donüşümü ve gelişmiş kontrol algoritmaları ile hassas motor kontrol uygulamaları için tasarlanmıştır.</span>
+                </p>
+                <ul class="features">
+                    <li>
+                        <strong class="lang-en">Microcontroller:</strong>
+                        <strong class="lang-tr">Mikrodenetleyici:</strong>
+                        <span class="lang-en">TI TMS320F280049C based architecture</span>
+                        <span class="lang-tr">TI TMS320F280049C tabanlı mimari</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Power Ratings:</strong>
+                        <strong class="lang-tr">Güç Değerleri:</strong>
+                        <span class="lang-en">9V - 50V Input Voltage, Nominal 300W Output Power</span>
+                        <span class="lang-tr">9V - 50V Giriş Gerilimi, Nominal 300W Çıkış Gücü</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Hardware Features:</strong>
+                        <strong class="lang-tr">Donanım Özellikleri:</strong>
+                        <span class="lang-en">USB-C PD (@ 100W), eFuse protection, and Internal Magnetic Encoder</span>
+                        <span class="lang-tr">USB-C PD (@ 100W), eFuse koruması ve Dahili Manyetik Enkoder</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Communication & Interface:</strong>
+                        <strong class="lang-tr">Haberleşme & Arayüz:</strong>
+                        <span class="lang-en">CANBus, UART, SPI, I2C, and JTAG programmable</span>
+                        <span class="lang-tr">CAN Bus, UART, SPI, I2C ve programlanabilir JTAG yapısı</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Programming:</strong>
+                        <strong class="lang-tr">Programlama:</strong>
+                        <span class="lang-en">Isolated USB Programmer for safe development</span>
+                        <span class="lang-tr">Güvenli donanım geliştirme için İzole USB Programlayıcı</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
 
             <article class="project-card">
                 <div class="image-placeholder">
                     <img src="images/ASSI.png" alt="Autonomous System Status Indicator Board">
                 </div>
                 <div class="project-content">
-                    <h3>Autonomous System Status Indicator Board</h3>
-                    <p class="function"><strong>Function:</strong> An ESP32-based status indicator board strictly designed to comply with the Formula Student Germany 2025 Rulebook, tailored for autonomous vehicle signaling and control.</p>
+                    <h3>
+                        <span class="lang-en">Autonomous System Status Indicator Board</span>
+                        <span class="lang-tr">Otonom Sistem Durum Gösterge Kartı</span>
+                    </h3>
+                    <p class="function">
+                        <strong class="lang-en">Function:</strong>
+                        <strong class="lang-tr">İşlev:</strong>
+                        <span class="lang-en">An ESP32-based status indicator board strictly designed to comply with the Formula Student Germany 2025 Rulebook, tailored for autonomous vehicle signaling and control.</span>
+                        <span class="lang-tr">Formula Student Almanya 2025 Kural Kitabı'na tam uyumlu olarak tasarlanmış, otonom araç sinyalizasyon ve kontrolüne özel ESP32 tabanlı otonom durum gösterge baski devre kartı.</span>
+                    </p>
                     <ul class="features">
-                        <li><strong>Microcontroller:</strong> ESP32 based MCU architecture</li>
-                        <li><strong>Power Specifications:</strong> 12V Input Voltage with dedicated 1x 24V and 1x 12V power outputs</li>
-                        <li><strong>Compliance:</strong> Fully compliant with Formula Student Germany 2025 regulations</li>
-                        <li><strong>Communication & I/O:</strong> 1x CAN, 1x SPI, and 7x GPIO outputs</li>
-                        <li><strong>Indication & Interface:</strong> Capable of driving common cathode RGB LED strips, featuring a built-in encoder for a 7-position switch</li>
-                        <li><strong>Programming:</strong> Programmable via external USB to TTL converter</li>
+                        <li>
+                            <strong class="lang-en">Microcontroller:</strong>
+                            <strong class="lang-tr">Mikrodenetleyici:</strong>
+                            <span class="lang-en">ESP32 based MCU architecture</span>
+                            <span class="lang-tr">ESP32 tabanlı MCU mimarisi</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Power Specifications:</strong>
+                            <strong class="lang-tr">Güç Özellikleri:</strong>
+                            <span class="lang-en">12V Input Voltage with dedicated 1x 24V and 1x 12V power outputs</span>
+                            <span class="lang-tr">12V Giriş Gerilimi, 1x 24V ve 1x 12V güç çıkışı</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Compliance:</strong>
+                            <strong class="lang-tr">Uyumluluk:</strong>
+                            <span class="lang-en">Fully compliant with Formula Student Germany 2025 regulations</span>
+                            <span class="lang-tr">Formula Student Almanya 2025 regülasyonları ile %100 uyumlu</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Communication & I/O:</strong>
+                            <strong class="lang-tr">Haberleşme & G/Ç:</strong>
+                            <span class="lang-en">1x CAN, 1x SPI, and 7x GPIO outputs</span>
+                            <span class="lang-tr">1x CAN, 1x SPI ve 7x GPIO çıkışı</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Indication & Interface:</strong>
+                            <strong class="lang-tr">Gösterge & Arayüz:</strong>
+                            <span class="lang-en">Capable of driving common cathode RGB LED strips, featuring a built-in encoder for a 7-position switch</span>
+                            <span class="lang-tr">Ortak katotlu RGB LED şeritlerini sürebilme kapasitesi ve 7 pozisyonlu anahtar için dahili enkoder devresi</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Programming:</strong>
+                            <strong class="lang-tr">Programlama:</strong>
+                            <span class="lang-en">Programmable via external USB to TTL converter</span>
+                            <span class="lang-tr">Harici USB - TTL dönüştürücü üzerinden programlanabilir yapı</span>
+                        </li>
                     </ul>
                 </div>
             </article>
@@ -76,30 +160,90 @@
                     <img src="images/BSPD.png" alt="Brake System Plausibility Device (BSPD)">
                 </div>
                 <div class="project-content">
-                    <h3>Brake System Plausibility Device (BSPD)</h3>
-                    <p class="function"><strong>Function:</strong> A critical, strictly hardware-based safety system that continuously monitors brake and throttle inputs. It detects implausible states (e.g., simultaneous hard braking and acceleration) and autonomously opens the Shutdown Circuit (SDC) to ensure utmost driver safety.</p>
+                    <h3>
+                        <span class="lang-en">Brake System Plausibility Device (BSPD)</span>
+                        <span class="lang-tr">Fren Sistemi Tutarlılık Cihazı (BSPD)</span>
+                    </h3>
+                    <p class="function">
+                        <strong class="lang-en">Function:</strong>
+                        <strong class="lang-tr">İşlev:</strong>
+                        <span class="lang-en">A critical, strictly hardware-based safety system that continuously monitors brake and throttle inputs. It detects implausible states (e.g., simultaneous hard braking and acceleration) and autonomously opens the Shutdown Circuit (SDC) to ensure utmost driver safety.</span>
+                        <span class="lang-tr">Fren ve gaz girişlerini sürekli olarak izleyen, tamamen donanım tabanlı kritik güvenlik sistemi. Tutarsız durumları (örn. eşzamanlı sert fren ve hızlanma) algılar ve sürücü güvenliğini en üst düzeye çıkarmak için Kapatma Devresini (Shutdown Circuit - SDC) otonom olarak açar.</span>
+                    </p>
                     <ul class="features">
-                        <li><strong>Architecture:</strong> Standalone, non-programmable logic circuit designed for maximum reliability without any software dependencies.</li>
-                        <li><strong>Sensor Interfaces:</strong> Precision analog front-end supporting 1x Hall Effect Sensor (0-5V range) and 1x industrial-standard Pressure Sensor (4-20mA current loop).</li>
-                        <li><strong>Compliance:</strong> Engineered in strict compliance with the Formula Student Germany (FSG) 2025 Rulebook.</li>
-                        <li><strong>Safety Mechanism:</strong> Hardware-level implausibility detection that triggers an immediate SDC interruption to cut tractive system power.</li>
+                        <li>
+                            <strong class="lang-en">Architecture:</strong>
+                            <strong class="lang-tr">Mimari:</strong>
+                            <span class="lang-en">Standalone, non-programmable logic circuit designed for maximum reliability without any software dependencies.</span>
+                            <span class="lang-tr">Herhangi bir yazılım bağımlılığı olmadan maksimum güvenilirlik için tasarlanmış, bağımsız ve programlanamayan mantık devresi.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Sensor Interfaces:</strong>
+                            <strong class="lang-tr">Sensör Arayüzleri:</strong>
+                            <span class="lang-en">Precision analog front-end supporting 1x Hall Effect Sensor (0-5V range) and 1x industrial-standard Pressure Sensor (4-20mA current loop).</span>
+                            <span class="lang-tr">1x Hall Efekt Sensörü (0-5V aralığı) ve 1x endüstri standardı Basınç Sensörü (4-20mA akım döngüsü) destekleyen hassas analog ön yüz.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Compliance:</strong>
+                            <strong class="lang-tr">Uyumluluk:</strong>
+                            <span class="lang-en">Engineered in strict compliance with the Formula Student Germany (FSG) 2025 Rulebook.</span>
+                            <span class="lang-tr">Formula Student Almanya (FSG) 2025 Kural Kitabı ile tam uyumlu olarak geliştirilmiştir.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Safety Mechanism:</strong>
+                            <strong class="lang-tr">Güvenlik Mekanizması:</strong>
+                            <span class="lang-en">Hardware-level implausibility detection that triggers an immediate SDC interruption to cut tractive system power.</span>
+                            <span class="lang-tr">Çekiş sistem gücünü kesmek için anında SDC kesintisi tetikleyen donanım seviyesinde tutarsızlık algılama.</span>
+                        </li>
                     </ul>
                 </div>
             </article>
-
             <article class="project-card">
                 <div class="image-placeholder">
                     <img src="images/NTC_Slave.png" alt="NTC Slave PCB (Battery Temperature Monitor)">
                 </div>
                 <div class="project-content">
-                    <h3>NTC Slave PCB (Battery Temp Node)</h3>
-                    <p class="function"><strong>Function:</strong> A compact Battery Management System (BMS) slave node designed to precisely monitor battery cell temperatures and relay critical thermal telemetry data to the main vehicle network.</p>
+                    <h3>
+                        <span class="lang-en">NTC Slave PCB (Battery Temperature Node)</span>
+                        <span class="lang-tr">NTC Slave PCB (Batarya Sıcaklık Düğümü)</span>
+                    </h3>
+                    <p class="function">
+                        <strong class="lang-en">Function:</strong>
+                        <strong class="lang-tr">İşlev:</strong>
+                        <span class="lang-en">A compact Battery Management System (BMS) slave node designed to precisely monitor battery cell temperatures and relay critical thermal telemetry data to the main vehicle network.</span>
+                        <span class="lang-tr">Batarya hücre sıcaklıklarını hassas bir şekilde izlemek ve kritik termal telemetri verilerini ana araç ağına iletmek üzere tasarlanmış kompakt bir Batarya Yönetim Sistemi (BMS) alt (slave) düğümü.</span>
+                    </p>
                     <ul class="features">
-                        <li><strong>Microcontroller:</strong> ESP32-based architecture for efficient data processing and network communication.</li>
-                        <li><strong>Thermal Sensing:</strong> 12-channel NTC thermistor input for comprehensive temperature monitoring of accumulator segments.</li>
-                        <li><strong>Communication:</strong> 1x CAN bus interface for reliable, real-time data transmission to the master BMS.</li>
-                        <li><strong>Safety & Reliability:</strong> Integrated short-circuit protection to ensure safe operation within the battery pack environment.</li>
-                        <li><strong>Programming:</strong> Accessible debug and programming interface via an external USB-to-TTL converter.</li>
+                        <li>
+                            <strong class="lang-en">Microcontroller:</strong>
+                            <strong class="lang-tr">Mikrodenetleyici:</strong>
+                            <span class="lang-en">ESP32-based architecture for efficient data processing and network communication.</span>
+                            <span class="lang-tr">Verimli veri işleme ve ağ haberleşmesi için ESP32 tabanlı mimari.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Thermal Sensing:</strong>
+                            <strong class="lang-tr">Termal Algılama:</strong>
+                            <span class="lang-en">12-channel NTC thermistor input for comprehensive temperature monitoring of accumulator segments.</span>
+                            <span class="lang-tr">Akümülatör segmentlerinin kapsamlı sıcaklık takibi için 12 kanallı NTC termistör girişi.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Communication:</strong>
+                            <strong class="lang-tr">Haberleşme:</strong>
+                            <span class="lang-en">1x CAN bus interface for reliable, real-time data transmission to the master BMS.</span>
+                            <span class="lang-tr">Ana BMS'e (Master BMS) güvenilir ve gerçek zamanlı veri aktarımı için 1x CAN bus arayüzü.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Safety & Reliability:</strong>
+                            <strong class="lang-tr">Güvenlik & Güvenilirlik:</strong>
+                            <span class="lang-en">Integrated short-circuit protection to ensure safe operation within the battery pack environment.</span>
+                            <span class="lang-tr">Batarya paketi içerisinde güvenli bir şekilde çalışması için entegre kısa devre koruması.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Programming:</strong>
+                            <strong class="lang-tr">Programlama:</strong>
+                            <span class="lang-en">Accessible debug and programming interface via an external USB-to-TTL converter.</span>
+                            <span class="lang-tr">Harici bir USB - TTL dönüştürücü aracılığıyla erişilebilir hata ayıklama (debug) ve programlama arayüzü.</span>
+                        </li>
                     </ul>
                 </div>
             </article>
@@ -108,36 +252,87 @@
     </main>
 
     <main class="container" id="software-projects">
-        <h2>Embedded Software Projects</h2>
-        <div class="project-grid">
+    <h2>
+        <span class="lang-en">Embedded Software Projects</span>
+        <span class="lang-tr">Gömülü Yazılım Projeleri</span>
+    </h2>
+    <div class="project-grid">
 
-            <article class="project-card">
-                <div class="project-content">
-                    <h3>16-Bit Basic Computer Architecture</h3>
-                    <p class="function"><strong>Function:</strong> A complete 16-bit computer system designed with Verilog HDL, based on the classic Basic Computer architecture (Mano's Architecture).</p>
-                    <ul class="features">
-                        <li><strong>Architecture:</strong> Full 16-bit system implementation including ALU, Control Unit, Memory, and I/O interfaces.</li>
-                        <li><strong>Hardware Description:</strong> Developed and modeled at the Register Transfer Level (RTL) using Verilog.</li>
-                        <li><strong>Implementation:</strong> Comprehensive design of instruction fetch, decode, and execute cycles for the complete instruction set.</li>
-                    </ul>
-                    <div class="card-actions">
-                        <a href="https://github.com/emirhanydiin/Mono-s-Basic-Computer" target="_blank" class="github-btn">View Source Code on GitHub</a>
-                    </div>
+        <article class="project-card">
+            <div class="project-content">
+                <h3>
+                    <span class="lang-en">16-Bit Basic Computer Architecture</span>
+                    <span class="lang-tr">16-Bit Temel Bilgisayar Mimarisi</span>
+                </h3>
+                <p class="function">
+                    <strong class="lang-en">Function:</strong>
+                    <strong class="lang-tr">İşlev:</strong>
+                    <span class="lang-en">A complete 16-bit computer system designed with Verilog HDL, based on the classic Basic Computer architecture (Mano's Architecture).</span>
+                    <span class="lang-tr">Klasik Temel Bilgisayar (Mano) mimarisine dayanan, Verilog HDL ile tasarlanmış 16-bit bilgisayar sistemi.</span>
+                </p>
+                <ul class="features">
+                    <li>
+                        <strong class="lang-en">Architecture:</strong>
+                        <strong class="lang-tr">Mimari:</strong>
+                        <span class="lang-en">Full 16-bit system implementation including ALU, Control Unit, Memory, and I/O interfaces.</span>
+                        <span class="lang-tr">ALU, Kontrol Ünitesi, Bellek ve G/Ç (I/O) arayüzlerini içeren 16-bit sistem tasarımı.</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Hardware Description:</strong>
+                        <strong class="lang-tr">Donanım Tanımlama:</strong>
+                        <span class="lang-en">Developed and modeled at the Register Transfer Level (RTL) using Verilog.</span>
+                        <span class="lang-tr">Yazmaç Aktarım Seviyesinde (RTL - Register Transfer Level) Verilog kullanarak modelleme.</span>
+                    </li>
+                    <li>
+                        <strong class="lang-en">Implementation:</strong>
+                        <strong class="lang-tr">Uygulama:</strong>
+                        <span class="lang-en">Comprehensive design of instruction fetch, decode, and execute cycles for the complete instruction set.</span>
+                        <span class="lang-tr">Tüm komut seti için komut getirme (fetch), çözme (decode) ve yürütme (execute) döngülerinin kapsamlı tasarımı.</span>
+                    </li>
+                </ul>
+                <div class="card-actions">
+                    <a href="https://github.com/emirhanydiin/Mono-s-Basic-Computer" target="_blank" class="github-btn">
+                        <span class="lang-en">View Source Code on GitHub</span>
+                        <span class="lang-tr">GitHub'da Kaynak Kodunu Görüntüle</span>
+                    </a>
                 </div>
-            </article>
+            </div>
+        </article>
             
             <article class="project-card">
                 <div class="project-content">
-                    <h3>Snake Game on a Hand-Controlled Console</h3>
-                    <p class="function"><strong>Function:</strong> A custom hand-held console playing the classic Snake game, built on the TI TM4C123GH6PM microcontroller. The game is controlled entirely by physical hand gestures (tilting) using an accelerometer.</p>
+                    <h3>
+                        <span class="lang-en">Snake Game on a Hand-Controlled Console</span>
+                        <span class="lang-tr">El Kontrollü Konsolda Yılan Oyunu</span>
+                    </h3>
+                    <p class="function">
+                        <strong class="lang-en">Function:</strong>
+                        <strong class="lang-tr">İşlev:</strong>
+                        <span class="lang-en">A custom hand-held console playing the classic Snake game, built on the TI TM4C123GH6PM microcontroller. The game is controlled entirely by physical hand gestures (tilting) using an accelerometer.</span>
+                        <span class="lang-tr">TI TM4C123GH6PM mikrodenetleyicisi üzerinde çalışan, klasik Yılan oyununu oynatan özel bir el konsolu. Oyun tamamen ivmeölçer kullanılarak yapılan fiziksel el hareketleriyle (eğme) kontrol edilmektedir.</span>
+                    </p>
                     <ul class="features">
-                        <li><strong>Core Logic:</strong> Developed the main game mechanics in Bare-metal C, while the ADC data acquisition was written strictly in ARM Assembly.</li>
-                        <li><strong>Interrupt-Driven Sensor Integration:</strong> Implemented a Finite State Machine (FSM) inside the I2C interrupt handler to read accelerometer (ADXL345) data without halting the CPU.</li>
-                        <li><strong>Audio Feedback:</strong> Generated non-blocking game sounds (turn, error, game over) using a passive buzzer and hardware timers (GPTM).</li>
+                        <li>
+                            <strong class="lang-en">Core Logic:</strong>
+                            <strong class="lang-tr">Çekirdek Mantık:</strong>
+                            <span class="lang-en">Developed the main game mechanics in Bare-metal C, while the ADC data acquisition was written strictly in ARM Assembly.</span>
+                            <span class="lang-tr">Ana oyun mekanikleri Bare-metal C ile geliştirilirken, ADC veri okuma işlemleri tamamen ARM Assembly ile yazılmıştır.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Interrupt-Driven Sensor Integration:</strong>
+                            <strong class="lang-tr">Kesme Tabanlı Sensör Entegrasyonu:</strong>
+                            <span class="lang-en">Implemented a Finite State Machine (FSM) inside the I2C interrupt handler to read accelerometer (ADXL345) data without halting the CPU.</span>
+                            <span class="lang-tr">İvmeölçer (ADXL345) verilerini işlemciyi durdurmadan okumak için I2C kesme işleyicisinin (interrupt handler) içine bir Sonlu Durum Makinesi (FSM) entegre edilmiştir.</span>
+                        </li>
+                        <li>
+                            <strong class="lang-en">Audio Feedback:</strong>
+                            <strong class="lang-tr">Sesli Geri Bildirim:</strong>
+                            <span class="lang-en">Generated non-blocking game sounds (turn, error, game over) using a passive buzzer and hardware timers (GPTM).</span>
+                            <span class="lang-tr">Pasif buzzer ve donanım zamanlayıcıları (GPTM) kullanılarak, işlemciyi kilitlemeyen (non-blocking) oyun sesleri (dönüş, hata, oyun bitti) üretilmiştir.</span>
+                        </li>
                     </ul>
                 </div>
             </article>
-
         </div>
     </main>
 
@@ -169,5 +364,25 @@
             }
         });
     </script>
+
+    <script>
+    const langToggleBtn = document.getElementById('lang-toggle');
+    
+    // Hafızada dil var mı kontrol et, yoksa varsayılanı İngilizce (en) yap
+    let currentLang = localStorage.getItem('lang') || 'en';
+    document.body.classList.add('lang-' + currentLang);
+
+    // Butona tıklandığında dili değiştir
+    langToggleBtn.addEventListener('click', () => {
+        if (document.body.classList.contains('lang-en')) {
+            document.body.classList.replace('lang-en', 'lang-tr');
+            localStorage.setItem('lang', 'tr');
+        } else {
+            document.body.classList.replace('lang-tr', 'lang-en');
+            localStorage.setItem('lang', 'en');
+        }
+    });
+    </script>
+
 </body>
 </html>

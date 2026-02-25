@@ -393,3 +393,9 @@ footer {
         padding: 40px 30px;
     }
 }
+
+/* ==========================================================================
+   DİL SEÇENEĞİ (LANGUAGE TOGGLE) MANTIĞI
+   ========================================================================== */
+body.lang-en .lang-tr { display: none; }
+body.lang-tr .lang-en { display: none; }
