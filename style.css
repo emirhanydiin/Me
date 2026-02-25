@@ -89,6 +89,16 @@ header p {
     font-weight: 300;
 }
 
+/* Yetenekler (Skills) */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* Elemanlar arası dinamik boşluk */
+    margin-bottom: 30px;
+}
+
+/* Yetenek (Skill) Etiketleri */
 .skills span {
     background-color: rgba(59, 130, 246, 0.15);
     color: #60a5fa;
@@ -96,10 +106,20 @@ header p {
     padding: 8px 18px;
     border-radius: 30px;
     font-size: 0.95rem;
-    margin: 5px;
-    display: inline-block;
     font-weight: 500;
     backdrop-filter: blur(5px);
+    white-space: nowrap; /
+}
+
+/* Sadece Mobil Ekranlar İçin Küçültme (768px ve altı) */
+@media (max-width: 768px) {
+    .skills {
+        gap: 8px; 
+    }
+    .skills span {
+        padding: 5px 12px; 
+        font-size: 0.8rem; 
+    }
 }
 
 /* İletişim & Tema Butonları */
