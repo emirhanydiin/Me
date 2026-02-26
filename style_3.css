@@ -1,0 +1,397 @@
+/* ==========================================================================
+   PREMIUM HARDWARE / MATTE PCB PORTFOLIO - CSS 
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Genel Ayarlar ve "White PCB" (Aydınlık Mod) Paleti */
+:root {
+    --bg-color: #f8f9fc;
+    --grid-color: rgba(0, 0, 0, 0.03);
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --border-hover: #d97706; /* Bakır/Altın Rengi */
+    --text-color: #475569; 
+    --heading-color: #0f172a; 
+    --accent-color: #d97706; /* ENIG Gold / Copper */
+    --accent-glow: rgba(217, 119, 6, 0.15);
+}
+
+/* Karanlık Mod - "Matte Black PCB" (Kömür Siyahı ve Altın) */
+[data-theme="dark"] {
+    --bg-color: #0a0a0a; 
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --card-bg: #121212; 
+    --border-color: #262626;
+    --border-hover: #eab308; /* Parlak Altın */
+    --text-color: #9ca3af; 
+    --heading-color: #ffffff; 
+    --accent-color: #eab308; 
+    --accent-glow: rgba(234, 179, 8, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    /* Teknik Izgara (Grid) Arka Planı */
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   HEADER TASARIMI
+   ========================================================================== */
+header {
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    background: radial-gradient(circle at center, var(--card-bg) 0%, transparent 100%);
+}
+
+header h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: var(--heading-color);
+    text-transform: uppercase;
+}
+
+header p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Yetenekler (Skills) - Çip Bacakları (Pins) Görünümü */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; 
+    margin-bottom: 40px;
+}
+
+.skills span {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 4px;
+    white-space: nowrap; 
+    transition: all 0.3s ease;
+}
+
+.skills span:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: var(--accent-glow);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 3rem; }
+    .skills { gap: 8px; }
+    .skills span { padding: 4px 10px; font-size: 0.75rem; }
+}
+
+/* İletişim & Tema Butonları */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-links a, .theme-btn {
+    background-color: transparent;
+    color: var(--heading-color);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover, .theme-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Üst Menü (Sekmeler) */
+.top-nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* ==========================================================================
+   PROJELER BÖLÜMÜ (MAIN)
+   ========================================================================== */
+main {
+    padding: 100px 20px;
+}
+
+main h2 {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 2.5rem;
+    color: var(--heading-color); 
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+main h2::after {
+    content: " //";
+    color: var(--accent-color);
+}
+
+main h2::before {
+    content: "// ";
+    color: var(--accent-color);
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Kart Tasarımı - İnce Hatlı Devre Kartı Şablonu */
+.project-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 10px 30px var(--accent-glow);
+    transform: translateY(-5px);
+}
+
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Görsel Alanı */
+.image-placeholder {
+    flex: 1;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; 
+    border-right: 1px solid var(--border-color);
+    position: relative;
+}
+
+.project-card:hover .image-placeholder {
+    border-color: var(--border-hover);
+}
+
+.project-card:nth-child(even) .image-placeholder {
+    border-right: none;
+    border-left: 1px solid var(--border-color);
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    max-height: 350px; 
+    object-fit: contain; 
+    border-radius: 4px; 
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .image-placeholder img {
+    transform: scale(1.02);
+}
+
+/* İçerik Kısmı */
+.project-content {
+    flex: 1.2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-content h3 {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.function {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.function strong {
+    color: var(--heading-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.features {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+.features li::before {
+    content: "+";
+    color: var(--accent-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.features li strong {
+    color: var(--heading-color);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   BÜTONLAR (GITHUB VB.)
+   ========================================================================== */
+.card-actions {
+    margin-top: 30px;
+}
+
+.github-btn {
+    display: inline-flex;
+    background-color: transparent;
+    color: var(--heading-color);
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+[data-theme="dark"] .github-btn:hover {
+    color: #000000; /* Koyu modda altın butonun üstündeki yazı siyah olur */
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: transparent;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-top: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   MOBİL UYUM (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .project-card, 
+    .project-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .image-placeholder,
+    .project-card:nth-child(even) .image-placeholder {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 30px;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
+}
+
+/* ==========================================================================
+   DİL SEÇENEĞİ (LANGUAGE TOGGLE) MANTIĞI
+   ========================================================================== */
+body.lang-en .lang-tr { display: none; }
+body.lang-tr .lang-en { display: none; }
