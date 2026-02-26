@@ -1,0 +1,384 @@
+/* ==========================================================================
+   NEO-BRUTALIST / INDUSTRIAL TECH PORTFOLIO - CSS 
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+/* Genel Ayarlar ve Katı Renk Paleti */
+:root {
+    --bg-color: #f4f4f0; /* Kağıt grisi/beyazı */
+    --text-color: #1a1a1a; 
+    --heading-color: #000000; 
+    --accent-color: #ff5722; /* Endüstriyel Turuncu */
+    --accent-hover: #e64a19;
+    --card-bg: #ffffff;
+    --border-color: #000000;
+    
+    /* Neo-brutalist katı gölgeler */
+    --shadow-solid: 6px 6px 0px var(--border-color);
+    --shadow-solid-hover: 10px 10px 0px var(--accent-color);
+}
+
+/* Karanlık Mod (Kömür Siyahı & Neon) */
+[data-theme="dark"] {
+    --bg-color: #0d0d0d; 
+    --text-color: #d1d5db; 
+    --heading-color: #ffffff; 
+    --accent-color: #ff5722; 
+    --accent-hover: #ff784e;
+    --card-bg: #141414; 
+    --border-color: #4b5563;
+    
+    --shadow-solid: 6px 6px 0px var(--accent-color);
+    --shadow-solid-hover: 10px 10px 0px var(--border-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Space Grotesk', sans-serif; /* Ana font */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   HEADER TASARIMI
+   ========================================================================== */
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 100px 0 60px;
+    text-align: center;
+    border-bottom: 4px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+    color: var(--heading-color);
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 35px;
+    font-family: 'Chivo Mono', monospace; /* Teknik alt başlık */
+}
+
+/* Yetenekler (Skills) - Kartvizit / Etiket Tarzı */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+    margin-bottom: 40px;
+}
+
+.skills span {
+    background-color: var(--bg-color);
+    color: var(--heading-color);
+    border: 2px solid var(--border-color);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'Chivo Mono', monospace;
+    white-space: nowrap; 
+    box-shadow: 3px 3px 0px var(--accent-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills span:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .skills { gap: 10px; }
+    .skills span { padding: 6px 12px; font-size: 0.85rem; }
+    header h1 { font-size: 2.8rem; }
+}
+
+/* İletişim & Tema Butonları */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-links a, .theme-btn {
+    background-color: var(--heading-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border: 2px solid var(--heading-color);
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Chivo Mono', monospace;
+    transition: all 0.2s ease;
+}
+
+.contact-links a:hover, .theme-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Üst Menü (Sekmeler) - Teknik Dosya Sekmesi Görünümü */
+.top-nav {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 700;
+    padding: 8px 20px;
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.top-nav a:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0px 0px 0px var(--border-color);
+    transform: translate(4px, 4px);
+}
+
+/* ==========================================================================
+   PROJELER BÖLÜMÜ (MAIN)
+   ========================================================================== */
+main {
+    padding: 80px 20px;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    color: var(--heading-color); 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-bottom: 4px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* Kart Tasarımı - Keskin, Sınırları Belli Katı Tasarım */
+.project-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow-solid);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-solid-hover);
+}
+
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Görsel Alanı - Teknik Çizim Kağıdı Deseni (Izgara) */
+.image-placeholder {
+    flex: 1;
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; 
+    border-right: 3px solid var(--border-color);
+}
+
+[data-theme="dark"] .image-placeholder {
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+}
+
+.project-card:nth-child(even) .image-placeholder {
+    border-right: none;
+    border-left: 3px solid var(--border-color);
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    max-height: 350px; 
+    object-fit: contain; 
+    border: 3px solid var(--border-color);
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+/* İçerik Kısmı */
+.project-content {
+    flex: 1.2;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-content h3 {
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.function {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.function strong {
+    color: var(--accent-color);
+}
+
+.features {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.features li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 1.05rem;
+}
+
+.features li::before {
+    content: ">>";
+    color: var(--accent-color);
+    font-weight: 700;
+    font-family: 'Chivo Mono', monospace;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.features li strong {
+    color: var(--heading-color);
+}
+
+/* ==========================================================================
+   BÜTONLAR (GITHUB VB.)
+   ========================================================================== */
+.card-actions {
+    margin-top: 35px;
+}
+
+.github-btn {
+    display: inline-flex;
+    background-color: var(--card-bg);
+    color: var(--heading-color);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.github-btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0px 0px 0px var(--border-color);
+    transform: translate(4px, 4px);
+}
+
+[data-theme="dark"] .github-btn {
+    background-color: var(--bg-color);
+    color: var(--heading-color);
+}
+
+[data-theme="dark"] .github-btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--heading-color);
+    color: var(--bg-color);
+    margin-top: 60px;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 1rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+/* ==========================================================================
+   MOBİL UYUM (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .project-card, 
+    .project-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .image-placeholder,
+    .project-card:nth-child(even) .image-placeholder {
+        border-right: none;
+        border-left: none;
+        border-bottom: 3px solid var(--border-color);
+        padding: 30px;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
+}
+
+/* ==========================================================================
+   DİL SEÇENEĞİ (LANGUAGE TOGGLE) MANTIĞI
+   ========================================================================== */
+body.lang-en .lang-tr { display: none; }
+body.lang-tr .lang-en { display: none; }
