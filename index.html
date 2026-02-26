@@ -341,47 +341,60 @@
     </footer>
 
     <script>
+        /* ==========================================
+           TEMA (DARK/LIGHT MODE) AYARLARI
+           ========================================== */
         const toggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        // Varsayılan temayı 'dark' (Karanlık Mod) yaptık
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        // Sayfa yüklendiğinde hafızadaki temayı kontrol et
+        // Sayfa ilk yüklendiğinde temayı uygula ve buton metnini ayarla
         if (currentTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
-            toggleButton.textContent = '☀️ Light Mode';
+            if (toggleButton) toggleButton.textContent = '☀️ Light Mode';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if (toggleButton) toggleButton.textContent = '🌙 Dark Mode';
         }
 
         // Butona tıklandığında temayı değiştir
-        toggleButton.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            if (theme === 'dark') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-                toggleButton.textContent = '🌙 Dark Mode';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                toggleButton.textContent = '☀️ Light Mode';
-            }
-        });
-    </script>
-
-    <script>
-    const langToggleBtn = document.getElementById('lang-toggle');
-    
-    // Hafızada dil var mı kontrol et, yoksa varsayılanı İngilizce (en) yap
-    let currentLang = localStorage.getItem('lang') || 'en';
-    document.body.classList.add('lang-' + currentLang);
-
-    // Butona tıklandığında dili değiştir
-    langToggleBtn.addEventListener('click', () => {
-        if (document.body.classList.contains('lang-en')) {
-            document.body.classList.replace('lang-en', 'lang-tr');
-            localStorage.setItem('lang', 'tr');
-        } else {
-            document.body.classList.replace('lang-tr', 'lang-en');
-            localStorage.setItem('lang', 'en');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                let theme = document.documentElement.getAttribute('data-theme');
+                if (theme === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                    toggleButton.textContent = '🌙 Dark Mode';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    toggleButton.textContent = '☀️ Light Mode';
+                }
+            });
         }
-    });
+
+        /* ==========================================
+           DİL (TR/EN) AYARLARI
+           ========================================== */
+        const langToggleBtn = document.getElementById('lang-toggle');
+        
+        // Varsayılan dili 'en' (İngilizce) olarak tutuyoruz
+        let currentLang = localStorage.getItem('lang') || 'en';
+        document.body.classList.add('lang-' + currentLang);
+
+        // Butona tıklandığında dili değiştir
+        if (langToggleBtn) {
+            langToggleBtn.addEventListener('click', () => {
+                if (document.body.classList.contains('lang-en')) {
+                    document.body.classList.replace('lang-en', 'lang-tr');
+                    localStorage.setItem('lang', 'tr');
+                } else {
+                    document.body.classList.replace('lang-tr', 'lang-en');
+                    localStorage.setItem('lang', 'en');
+                }
+            });
+        }
     </script>
 
 </body>
